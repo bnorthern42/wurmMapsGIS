@@ -1,0 +1,9 @@
+{
+  "maplibre-terrain-rgb": {
+    "type": "raster-dem",
+    "encoding": "mapbox",
+    "tiles": [
+      "/chaos.png"
+    ]
+  }
+}

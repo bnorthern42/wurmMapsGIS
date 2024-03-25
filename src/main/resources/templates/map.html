@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet"  th:href="@{/webjars/leaflet/1.8.0/leaflet.css}" />
+    <script type="text/javascript" src="/webjars/leaflet/1.8.0/leaflet.js"
+            th:src="@{/webjars/leaflet/1.8.0/leaflet.js}"></script>
+
+    <link rel="stylesheet" href="/map.css" th:href="@{/map.css}">
+    <title>Map page</title>
+</head>
+<body>
+<header>
+    head
+</header>
+
+    <h3>i'm here now</h3>
+    <!--  <ul th:each="item: $features">
+          <li th:text="${item}"/>
+      </ul> -->
+<div class="container-full">
+    <div id="mapid"></div>
+</div>
+    <div id="map">
+        <script th:inline="javascript">
+            /*<![CDATA[*/
+
+            //declare map object
+            var map = L.map('map').setView([0, 0], 1);
+            //reference the tiles
+
+            //sets max bounds of the map
+
+            var southWest = L.latLng(-8502 / 100, -17824 / 100),
+                northEast = L.latLng(9000 / 100, 18000 / 100);
+            var bounds = L.latLngBounds(southWest, northEast);
+            map.setMaxBounds(bounds);
+            map.on('drag', function () {
+                map.panInsideBounds(bounds, { animate: false });
+            });
+
+            var img = L.imageOverlay('/maps/chaos.png', bounds).addTo(map);
+            map.fitBounds(bounds);
+            /*]]>*/
+        </script>
+
+    </div>
+
+
+
+<!-- /.container -->
+<script type="text/javascript" src="webjars/jquery/3.7.1/jquery.min.js"
+        th:src="@{/webjars/jquery/3.7.1/jquery.min.js}"></script>
+</body>
+</html>

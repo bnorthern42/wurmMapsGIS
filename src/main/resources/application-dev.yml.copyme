@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5437/wurmgisdb
+    username: gis
+    password: password
+    driverClassName: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl_auto: create
+      dialect: org.hibernate.spatial.dialect.postgis.PostgisDialect
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+        format_sql: true
+  security:
+    oauth2:
+      client:
+        registration:
+          external:
+            client-secret: <urClientSecret>

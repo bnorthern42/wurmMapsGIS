@@ -1,0 +1,30 @@
+app:
+  name: GiveMeAName
+server:
+  port: 7077
+  error:
+    include-message: always
+    include-binding-errors: always
+spring:
+  application:
+    name: ${app.name}
+  profiles:
+    active: dev
+  logging:
+    file:
+      name: "i-am-a-log.log"
+    level:
+      org.hibernate.SQL: debug
+  security:
+    oauth2:
+      client:
+        provider:
+          wurmMapsHotDog:
+            issuer-uri: "http://localhost:7050/realms/<something>"
+        registration:
+          <provider>:
+            provider: <provider>
+            client-name: <name>
+            client-id: <id>
+            scope: openid, offline_access, profile
+            authorization-grant-type: authorization_code
