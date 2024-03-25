@@ -2,7 +2,12 @@
 
 ## How To Setup
 - copy the 'copyme' application yml's without copy me, etc and enter your information
-
+- initial kingdom setup:
+  - [localhost:7077/api/getMap/testInput](localhost:7077/api/getMap/testInput)
+- To get kingdom json:
+  - [localhost:7077/api/kingdoms](localhost:7077/api/kingdoms)
+- Access Map:
+  - [localhost:7077/map](localhost:7077/map)
 ## Tech Stack
 - PostGIS (Postgres) [docker] for map data (available)
   - if you create new database you need to run sql to enable extensions for each specific database used
