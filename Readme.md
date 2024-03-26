@@ -3,7 +3,8 @@
 ## How To Setup
 - copy the 'copyme' application yml's without copy me, etc and enter your information
 - initial kingdom setup:
-  - [localhost:7077/api/getMap/testInput](localhost:7077/api/getMap/testInput)
+  - [http://localhost:7077/admin/kingdoms](http://localhost:7077/admin/kingdoms)
+  - There you will be able add kingdoms to database if they are not loaded (conditional button)
 - To get kingdom json:
   - [localhost:7077/api/kingdoms](localhost:7077/api/kingdoms)
   - ![kingdomsJson](imgs/kingdomsOfChaos.jpg)
