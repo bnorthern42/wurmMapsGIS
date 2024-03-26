@@ -23,3 +23,22 @@
 ## Other
 
 - This is a major WIP, use at your own risk
+
+### Todos (MAJOR in no particular order) 
+- get map working with icons
+- allow entry of items based on roles
+- allow deletion of items based on roles
+- add kingdom influence overlay
+- add locate artifact tooling
+- allow for sharing of map locations
+- add drawing of "war plans" and share them
+- place markers for "maybe" future deeds
+- profile setup for users
+- add deed costing calculator for known deed sizes
+- add other maps
+- add search for towers and deeds
+- map out roads on surface
+  - dijkstra's best route to get there
+  - weights of graph based on some topo survey of map
+- styling, colors, and fonts
+- open some stuff like influence publicly
